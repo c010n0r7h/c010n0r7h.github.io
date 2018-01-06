@@ -5,21 +5,12 @@ body {
     margin: 1em 0;
 }
 
-summary::-webkit-details-marker {
-    display: none;
-    border: none;
-    margin: 1em 0;
-}
-
 summary:after {
     content: "[+]";
-    margin: 1em 0;
     width: 20px;
     float: left;
-    list-style: none;
 }
 
 details[open] summary:after {
     content: "[-]";
-    margin: 1em 0;
 }
