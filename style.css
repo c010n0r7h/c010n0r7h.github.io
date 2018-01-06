@@ -16,6 +16,7 @@ summary:after {
     margin: 1em 0;
     width: 20px;
     float: left;
+    list-style: none;
 }
 
 details[open] summary:after {
