@@ -7,6 +7,7 @@ body {
 p {
     padding: 0;
     margin: 0; 
+    padding-left: 25px;
 }
 
 details {
@@ -23,6 +24,7 @@ summary:after {
     padding: 0;
     float: left;
     content: "[+] ";
+    width: 25px;
     border: none;
 }
 
