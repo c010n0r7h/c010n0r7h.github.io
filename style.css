@@ -8,13 +8,12 @@ p {
     margin: 0; 
     display: block;
     font-family: monospace;
-    white-space: pre;
 }
 details {
     display: block;
     font-family: monospace;
-    white-space: pre;
     margin: 0;
+    padding: 0;
 }
 
 summary::-webkit-details-marker {
@@ -23,8 +22,10 @@ summary::-webkit-details-marker {
 
 summary:after {
     margin: 0;
+    padding: 0;
     float: left;
-    content: "[+]";
+    white-space: pre;
+    content: "[+] ";
     width: 20px;
     border: none;
 }
