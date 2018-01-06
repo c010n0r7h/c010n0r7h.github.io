@@ -10,11 +10,11 @@ summary::-webkit-details-marker {
 }
 
 summary:after {
-    content: "[+]";
+    content: "[+] ";
     width: 20px;
     float: left;
 }
 
 details[open] summary:after {
-    content: "[-]";
+    content: "[-] ";
 }
