@@ -15,7 +15,7 @@ summary::-webkit-details-marker {
     display: none;
 }
 
-summary: after {
+summary:after {
     padding: 2px 6px;
     content: "[+]";
     width: 20px;
