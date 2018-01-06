@@ -24,7 +24,7 @@ details summary::-webkit-details-marker {
     display: none;
 }
 
-summary:before {
+details summary:{
     margin: 0;
     padding: 0;
     float: left;
@@ -33,6 +33,6 @@ summary:before {
     border: none;
 }
 
-details[open] summary:after {
+details[open] summary: {
     content: "[-] ";
 }
