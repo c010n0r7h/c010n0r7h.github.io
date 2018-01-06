@@ -16,6 +16,7 @@ pre {
 
 p {
     background-color: #F0F0F0;
+    width: 80ch;
     padding: 0;
     border-width: 1px;
     border-style: solid;
