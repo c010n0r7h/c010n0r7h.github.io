@@ -6,21 +6,16 @@ body {
 }
 
 summary::-webkit-details-marker {
-  display: none
+    display: none;
+    margin: 1em 0;
 }
+
 summary:after {
-  background: red; 
-  border-radius: 5px; 
-  content: "+"; 
-  color: #fff; 
-  float: left; 
-  font-size: 1.5em; 
-  font-weight: bold; 
-  margin: -5px 10px 0 0; 
-  padding: 0; 
-  text-align: center; 
-  width: 20px;
+    content: "[+]";
+    margin: 1em 0;
 }
+
 details[open] summary:after {
-  content: "-";
+    content: "[-]";
+    margin: 1em 0;
 }
