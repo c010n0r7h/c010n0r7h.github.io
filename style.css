@@ -12,6 +12,7 @@ p {
 details {
     margin: 0;
     padding: 0;
+    padding-left: 25px;
 }
 
 summary::-webkit-details-marker {
