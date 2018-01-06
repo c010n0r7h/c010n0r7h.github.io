@@ -33,6 +33,6 @@ summary:before {
     border: none;
 }
 
-details[open] summary:before {
+details[open] summary:after {
     content: "[-] ";
 }
