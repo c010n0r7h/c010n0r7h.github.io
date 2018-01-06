@@ -9,10 +9,15 @@ div {
     padding-left: 25px;
 }
 
+pre {
+        padding: 0;
+    margin: 0; 
+}
+
 p {
     padding: 0;
     margin: 0; 
-    padding-left: 25px;
+    padding-left: 30px;
 }
 
 details {
@@ -33,7 +38,7 @@ details > summary:after{
     padding: 0;
     float: left;
     content: "[+] ";
-    width: 25px;
+    width: 30px;
     border: none;
 }
 
