@@ -2,6 +2,8 @@ body {
     display: block;
     font-family: monospace;
     white-space: pre;
+    padding: 0;
+    margin: 0; 
 }
 p {
     padding: 0;
@@ -32,4 +34,6 @@ summary:after {
 
 details[open] summary:after {
     content: "[-] ";
+    padding: 0;
+    margin: 0; 
 }
