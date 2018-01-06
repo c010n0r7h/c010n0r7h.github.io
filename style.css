@@ -2,13 +2,11 @@ body {
     display: block;
     font-family: monospace;
     white-space: pre;
-    margin: 1em 0;
 }
 details {
     display: block;
     font-family: monospace;
     white-space: pre;
-    margin: 1em 0;
 }
 
 
@@ -17,8 +15,9 @@ summary::-webkit-details-marker {
 }
 
 summary:after {
-    content: "[+] ";
+    content: "[+]";
     width: 20px;
+    outline: none;
     float: left;
 }
 
