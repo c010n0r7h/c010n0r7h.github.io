@@ -15,8 +15,9 @@ pre {
 }
 
 p {
-        background-color: #F0F0F0;
+    background-color: #F0F0F0;
     padding: 0;
+    border: 1;
     margin: 0; 
     display: block;
     white-space: pre;
