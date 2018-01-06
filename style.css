@@ -5,6 +5,10 @@ body {
     margin: 1em 0;
 }
 
+summary::-webkit-details-marker {
+    display: none;
+}
+
 summary:after {
     content: "[+]";
     width: 20px;
