@@ -4,6 +4,13 @@ body {
     white-space: pre;
     margin: 1em 0;
 }
+details {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+}
+
 
 summary::-webkit-details-marker {
     display: none;
