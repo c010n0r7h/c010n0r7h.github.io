@@ -13,6 +13,8 @@ summary::-webkit-details-marker {
 summary:after {
     content: "[+]";
     margin: 1em 0;
+    width: 20px;
+    float: left;
 }
 
 details[open] summary:after {
