@@ -15,15 +15,21 @@ RESET="\033[00m" 	# Normal
 
 
 ##### Disable screensaver
-(( STAGE++ )); echo -e "\n\n ${GREEN}[+]${RESET} (${STAGE}/${TOTAL}) Disabling ${GREEN}screensaver${RESET}"
+echo -e "\n\n ${GREEN}[+]${RESET} Disabling ${GREEN}screensaver${RESET}"
 xset s 0 0
 xset s off
 gsettings set org.gnome.desktop.session idle-delay 0
 
-#-Change Password---------------------------------------------#
+echo -e "\n\n ${GREEN}[+]${RESET} Upgrading ${GREEN}Kali${RESET}"
 apt-get update
 apt-get -y upgrade
 apt-get -y dist-upgrade
+
+echo -e "\n\n ${GREEN}[+]${RESET} Installing ${GREEN}VMware Tools${RESET}"
+apt-get install -y open-vm-tools
+apt-get install -y open-vm-tools-desktop
+
+#-Change Password---------------------------------------------#
 passwd                  
 
 
