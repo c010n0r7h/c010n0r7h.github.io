@@ -13,7 +13,20 @@ BLUE="\033[01;34m" 	# Heading
 BOLD="\033[01;01m" 	# Highlight
 RESET="\033[00m" 	# Normal  
 
+
+##### Disable screensaver
+(( STAGE++ )); echo -e "\n\n ${GREEN}[+]${RESET} (${STAGE}/${TOTAL}) Disabling ${GREEN}screensaver${RESET}"
+xset s 0 0
+xset s off
+gsettings set org.gnome.desktop.session idle-delay 0
+else
+ echo -e "\n\n ${YELLOW}[i]${RESET} ${YELLOW}Skipping disabling package updater${RESET}..."
+fi
+
 #-Change Password---------------------------------------------#
+apt-get update
+apt-get -y upgrade
+apt-get -y dist-upgrade
 passwd                  
 
 
