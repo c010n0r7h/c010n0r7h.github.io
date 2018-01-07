@@ -12,8 +12,8 @@ YELLOW="\033[01;33m" 	# Warnings/Information
 BLUE="\033[01;34m" 	# Heading
 BOLD="\033[01;01m" 	# Highlight
 RESET="\033[00m" 	# Normal  
-
-
+#-Change Password---------------------------------------------#
+passwd       
 ##### Disable screensaver
 echo -e "\n\n ${GREEN}[+]${RESET} Disabling ${GREEN}screensaver${RESET}"
 xset s 0 0
@@ -25,17 +25,7 @@ apt-get -qq update
 apt-get -qq -y upgrade
 apt-get -qq -y dist-upgrade
 
-echo -e "\n\n ${GREEN}[+]${RESET} Installing ${GREEN}VMware Tools${RESET}"
-apt-get -qq -y install open-vm-tools
-apt-get -qq -y install open-vm-tools-desktop
-
-echo -e "\n\n ${GREEN}[+]${RESET} Uninstalling ${GREEN}Packages no longer required${RESET}"
-apt-get -qq -y autoremove
-
-#-Change Password---------------------------------------------#
-passwd                  
-
-
+         
 #-Setup SSH---------------------------------------------------#
 #service ssh start		#Start SSH service
 #netstat -antp|grep sshd	#Verify SSH is running
