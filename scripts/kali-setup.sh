@@ -29,6 +29,9 @@ echo -e "\n\n ${GREEN}[+]${RESET} Installing ${GREEN}VMware Tools${RESET}"
 apt-get -qq -y install open-vm-tools
 apt-get -qq -y install open-vm-tools-desktop
 
+echo -e "\n\n ${GREEN}[+]${RESET} Uninstalling ${GREEN}Packages no longer required${RESET}"
+apt-get -qq -y autoremove
+
 #-Change Password---------------------------------------------#
 passwd                  
 
