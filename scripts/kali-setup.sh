@@ -21,13 +21,13 @@ xset s off
 gsettings set org.gnome.desktop.session idle-delay 0
 
 echo -e "\n\n ${GREEN}[+]${RESET} Upgrading ${GREEN}Kali${RESET}"
-apt-get update
-apt-get -y upgrade
-apt-get -y dist-upgrade
+apt-get -qq update
+apt-get -qq -y upgrade
+apt-get -qq -y dist-upgrade
 
 echo -e "\n\n ${GREEN}[+]${RESET} Installing ${GREEN}VMware Tools${RESET}"
-apt-get install -y open-vm-tools
-apt-get install -y open-vm-tools-desktop
+apt-get -qq -y install open-vm-tools
+apt-get -qq -y install open-vm-tools-desktop
 
 #-Change Password---------------------------------------------#
 passwd                  
