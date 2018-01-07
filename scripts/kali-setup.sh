@@ -25,6 +25,10 @@ apt-get -qq update
 apt-get -qq -y upgrade
 apt-get -qq -y dist-upgrade
 
+echo -e "\n\n ${GREEN}[+]${RESET} Installing ${GREEN}Virtual Machine Tools${RESET}"
+apt-get -qq -y install open-vm-tools open-vm-tools-desktop fuse
+
+
          
 #-Setup SSH---------------------------------------------------#
 #service ssh start		#Start SSH service
