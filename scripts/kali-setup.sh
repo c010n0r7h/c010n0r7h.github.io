@@ -19,9 +19,6 @@ RESET="\033[00m" 	# Normal
 xset s 0 0
 xset s off
 gsettings set org.gnome.desktop.session idle-delay 0
-else
- echo -e "\n\n ${YELLOW}[i]${RESET} ${YELLOW}Skipping disabling package updater${RESET}..."
-fi
 
 #-Change Password---------------------------------------------#
 apt-get update
