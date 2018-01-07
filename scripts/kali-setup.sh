@@ -3,7 +3,7 @@
 # Filename: kali-setup.sh                                     #
 # Kali post-install script              (updated: 2017-12-28  #
 #                                                             #
-
+# wget -qO kali-setup.sh https://c010n0r7h.github.io/scripts/kali-setup.sh && bash kali-setup.sh
 
 #-(Cosmetic) Colour output------------------------------------#
 RED="\033[01;31m" 	# Issues/Errors
