@@ -1,1 +1,7 @@
 
+editing modes
+
+.bash_history - A hidden file that contains a list of previous commands 
+
+set -o emacs - work in emacs mode
+set -o vi - work in vi mode
