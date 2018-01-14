@@ -1,0 +1,2 @@
+whois cisco.com
+whois 10.10.10.10           # Reverse Lookup
