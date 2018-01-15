@@ -19,7 +19,7 @@ dnsrecon -d <domain> -t axfr                    # DNS Zone Transfer from domain 
 -------------------------------------------------------------------
 DNSENUM 
 -------------------------------------------------------------------
-dnsenum <domain>	# DNS Zone Transfer from domain name
+dnsenum <domain>                                # DNS Zone Transfer from domain name
 
 -------------------------------------------------------------------
 NMAP  
