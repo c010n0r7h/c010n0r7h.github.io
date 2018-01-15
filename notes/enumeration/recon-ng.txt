@@ -1,0 +1,17 @@
+recon-ng
+
+whois_poc module to come up with employee names and email addresses at Cisco. 
+> use recon/domains-contacts/whois_pocs
+> set SOURCE cisco.com
+> run
+
+Search  sources  such  as  xssed  for  existing  XSS 
+vulnerabilities that have been reported.
+> use recon/domains-vulnerabilities/xssed
+> set SOURCE cisco.com
+> run
+
+Google_site module to search for additional cisco.com subdomains.
+> use recon/domains-hosts/google_site_web
+> set SOURCE cisco.com
+> run
