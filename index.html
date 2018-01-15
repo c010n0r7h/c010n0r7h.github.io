@@ -1,6 +1,13 @@
 <html>
   <head>
     <script src="./jquery-3.2.1.min.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+        $("#whois").load("./notes/enumeration/whois.txt");
+      });
+    </script>
+    
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body><pre> ██████╗ ██████╗  ██╗ ██████╗ ███╗   ██╗ ██████╗ ██████╗ ███████╗██╗  ██╗
@@ -50,7 +57,7 @@ theharvester -d cisco.com -l 10 -b bing >bing.txt</p>
       <div>
         <details>
         <summary>Whois</summary>
-        <p><iframe src="./notes/enumeration/whois.txt"></iframe></p>
+        <p id="whois"></p>
         </details>
       </div>
       <div>
@@ -62,7 +69,7 @@ theharvester -d cisco.com -l 10 -b bing >bing.txt</p>
       <div>
         <details>
         <summary>Recon-ng</summary>
-        <p><object data="./notes/enumeration/whois.txt" type="text/plain" style="overflow: hidden;"></object></p>
+        <p>....</p>
         </details>
       </div>      
     </details>
