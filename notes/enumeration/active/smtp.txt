@@ -1,0 +1,10 @@
+------
+NETCAT
+------
+nc -nv 10.10.10.26 25                # Connect to mail server
+...>VRFY bob                         # Verify a user name
+
+Oneliner to connect to mail server and verify a list of username (passive info gathering):
+for user in $(cat users.txt); do echo VRFY $user |nc -nv -w 1 10.10.10.26 25 2>/dev/null |grep ^"250";done
+
+Python script to verify a username: vrfy.py
