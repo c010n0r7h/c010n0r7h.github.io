@@ -23,7 +23,7 @@ p {
     border-style: solid;
     margin: 0; 
     display: block;
-    white-space: pre;
+    white-space: pre-wrap;
     padding-left: 30px;
 }
 
