@@ -1,0 +1,35 @@
+SMB NetBIOS service listens on TCP ports 139 and 445
+
+----
+NMAP 
+----
+nmap -v -p 139,445 10.10.10.1-51 --open               # SMB Scan Sweep
+nmap --script=smb-os-discovery.nse 10.10.10.23        # Use SMB to try to determine OS
+
+nmap -v -p 139,445 --script=smb-vuln* --script-args=unsafe=1 10.10.10.23
+                                                      # Check for known SMB vulnerabilities
+
+ls -l /usr/share/nmap/scripts/|grep smb               # nmap smb scripts
+
+-------
+NBTSCAN
+-------
+nbtscan -r 10.10.10.0/24                              # NetBios Name Scanner / Users
+
+----------
+ENUM4LINUX 
+----------
+enum4linux is a tool for enumerating information from Windows and Samba systems.
+
+enum4linux -v 10.10.10.23
+
+---------
+RCPCLIENT
+---------
+rpcclient -U "" 10.10.10.51                           # Connected to SMB with null session
+                                                      # Press enter  - no password
+
+rpcclient $> srvinfo                                  # ID OS Version
+rpcclient $> enumdomusers                             # List of usernames
+rpcclient $> getdompwinfo                             # Password policy
+
