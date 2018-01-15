@@ -1,20 +1,20 @@
 -------------------------------------------------------------------
 HOST
 -------------------------------------------------------------------
-host -t ns megacorpone.com # List of name servers
-host -t mx megacorpone.com # List of mail servers
-host www.megacorpone.com	# Check if domain name resolves to an IP
+host -t ns megacorpone.com                      # List of name servers
+host -t mx megacorpone.com                      # List of mail servers
+host www.megacorpone.com	                      # Check if domain name resolves to an IP
 
-scan-common-host-names.sh	# script to check for common subdomains
-scan-ips-for-names.sh	# Script to check ips for hostnames
+scan-common-host-names.sh	                      # script to check for common subdomains
+scan-ips-for-names.sh	                          # Script to check ips for hostnames
 
-host -l megacorpone.com ns1.megacorpone.com # DNS Zone Transfer
-dns-zone-transfer.sh	# Zone Transfer Script
+host -l megacorpone.com ns1.megacorpone.com     # DNS Zone Transfer
+dns-zone-transfer.sh	                          # Zone Transfer Script
 
 -------------------------------------------------------------------
 DNSRECON
 -------------------------------------------------------------------
-dnsrecon -d <domain> -t axfr	# DNS Zone Transfer from domain name
+dnsrecon -d <domain> -t axfr	                  # DNS Zone Transfer from domain name
 
 -------------------------------------------------------------------
 DNSENUM 
@@ -24,4 +24,4 @@ dnsenum <domain>	# DNS Zone Transfer from domain name
 -------------------------------------------------------------------
 NMAP  
 -------------------------------------------------------------------
-nmap --script=dns-zone-transfer -p 53 ns2.megacorpone.com # DNS Zone Transfer
+nmap --script=dns-zone-transfer -p 53 ns2.megacorpone.com     # DNS Zone Transfer
