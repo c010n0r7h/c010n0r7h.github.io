@@ -1,0 +1,41 @@
+Network Management UDP Port: 161
+
+----
+NMAP
+----
+nmap -sU --open -p 161 10.10.10.1-51                    # Scan for open SNMP Ports
+
+-----------
+ONESIXTYONE 
+-----------
+onesixtyone -c <community file> -i <file of IPS>        # Scan for IPS responding
+
+community
+---------
+public
+private
+manager
+
+ip file
+-------
+for ip in $(seq 1 51); do echo 10.10.10.$ip; done > ips
+
+--------
+SNMPWALK 
+--------
+snmpwalk -c public -v1 10.10.10.26                       # Query entire MIB
+
+1.3.6.1.2.1.25.1.6.0    System Processes
+1.3.6.1.2.1.25.4.2.1.2  Running Processes
+1.3.6.1.2.1.25.4.2.1.4  Processes Path
+1.3.6.1.2.1.25.2.3.1.4  Storage Units
+1.3.6.1.2.1.25.6.3.1.2  Software Name
+1.3.6.1.4.1.77.1.2.25   User Accounts
+1.3.6.1.2.1.6.13.1.3    TCP Local Ports
+
+snmpwalk -c public -v1 10.10.10.2 1.3.6.1.2.1.25.4.2.1.2 # Check running processes
+
+---------
+SNMPCHECK 
+---------
+snmp-check 10.10.10.2                                     # Networking information
