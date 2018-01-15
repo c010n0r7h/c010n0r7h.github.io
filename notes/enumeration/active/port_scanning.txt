@@ -1,0 +1,22 @@
+----------------
+CONNECT SCANNING 
+----------------
+Use netcat to scan a range of ports. (note netcat is writing to stderr, so redirect stderr into stdout like this: 2> &1)
+nc -nvv -w 1 -z 10.10.10.23 1-3390 2>&1 | grep -v "refused"          # TCP Ports 1-3390
+nc -nvu -w 1 -z 10.10.10.23 1-162                                    # UDP Ports 1-162
+
+----
+NMAP
+----
+nmap -sT 10.10.10.23 # Default scan (1000 most common ports)
+nmap -sT -p 1-65535 10.10.10.23                                      # Scan all ports
+nmap -sn 10.10.10.1-100 # Ping sweep
+nmap -sn 10.10.10.1-100 -oG pingsweep.txt                            # save results to a grepable file
+grep Up pingsweep.txt | cut -d " " -f 2                              # display list of ips that responded
+nmap -p 80 10.10.10.1-100 -oG websweep.txt                           # sweep for only ips with port 80 open
+grep open websweep.txt | cut -d " " -f 2                             # display list of ips with port 80 open
+
+nmap -sT -A --top-ports=20 10.10.10.1-100 -oG top-ports-sweep.txt    # scan sweep of the top 20 ports
+nmap -A 10.10.10.23 # Banner grab / OS Detection
+
+NSE scripts can be found in: /usr/share/nmap/scripts directory
