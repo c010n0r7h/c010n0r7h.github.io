@@ -17,8 +17,7 @@ pre {
 p {
     background-color: #F8F8F8;
     width: 120ch;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    word-wrap: break-all;
     padding: 0;
     border-width: 1px;
     border-style: solid;
